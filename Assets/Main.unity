@@ -252,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &325788295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325788294}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf3925495abad4c798bedcc50b89dc29, type: 3}
   m_Name: 
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392659541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 649efa25ad21f497fb803a5b36ada1e8, type: 3}
   m_Name: 
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595857775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 649efa25ad21f497fb803a5b36ada1e8, type: 3}
   m_Name: 
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595857775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad1460fb9aea94c0398043cfb654e4a9, type: 3}
   m_Name: 
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341941547}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad1460fb9aea94c0398043cfb654e4a9, type: 3}
   m_Name: 
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341941547}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 649efa25ad21f497fb803a5b36ada1e8, type: 3}
   m_Name: 
@@ -1003,7 +1003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1411701045
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1292,7 +1292,7 @@ SpriteRenderer:
   m_SortingLayerID: -1027503663
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d7159a67a357942ef8404ce06e20db64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0d86877b8634c54597efb5daef31e3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1331,6 +1331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathClip: {fileID: 8300000, guid: 668a107660fa54fe98e03b698a09aa49, type: 3}
   jumpForce: 700
+  moveForce: 3.7
 --- !u!1 &1778311907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,7 +1356,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778311907}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4dd43bb437e454be4a5cffc8d1065c21, type: 3}

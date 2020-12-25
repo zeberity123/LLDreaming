@@ -4,20 +4,24 @@
 public class PlayerController : MonoBehaviour {
    public AudioClip deathClip; // 사망시 재생할 오디오 클립
    public float jumpForce = 700f; // 점프 힘
+   public float moveForce = 3.7f;
 
    private int jumpCount = 0; // 누적 점프 횟수
    private bool isGrounded = false; // 바닥에 닿았는지 나타냄
    private bool isDead = false; // 사망 상태
+   private bool isWalking = false;
 
    private Rigidbody2D playerRigidbody; // 사용할 리지드바디 컴포넌트
    private Animator animator; // 사용할 애니메이터 컴포넌트
    private AudioSource playerAudio; // 사용할 오디오 소스 컴포넌트
+   private SpriteRenderer spriterender;
 
    private void Start() {
        // 초기화
        playerRigidbody = GetComponent<Rigidbody2D>();
        animator = GetComponent<Animator>();
        playerAudio = GetComponent<AudioSource>();
+       spriterender = GetComponent<SpriteRenderer>();
    }
 
    private void Update() {
@@ -26,6 +30,29 @@ public class PlayerController : MonoBehaviour {
        {
            return;
        }
+
+       
+   }
+
+   private void Move() {
+       float xInput = Input.GetAxis("Horizontal");
+       float xSpeed = xInput * moveForce;
+
+       Vector2 newVelocity = new Vector2(xSpeed, playerRigidbody.velocity.y);
+
+       if (Input.GetKey(KeyCode.D) == true || Input.GetKey(KeyCode.A) == true) {
+           isWalking = true;
+           playerRigidbody.velocity = newVelocity;
+           if (playerRigidbody.velocity.x < 0) {
+               spriterender.flipX = true;
+           }
+           if (playerRigidbody.velocity.x > 0) {
+               spriterender.flipX = false;
+           }
+           animator.SetBool("Walking", isWalking);
+       }
+
+       Move();
        if (Input.GetMouseButtonDown(0) && jumpCount < 2)
        {
            jumpCount++;
