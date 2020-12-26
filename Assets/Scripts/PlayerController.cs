@@ -24,12 +24,13 @@ public class PlayerController : MonoBehaviour {
        spriterender = GetComponent<SpriteRenderer>();
    }
 
-   private void Update() {
+   private void FixedUpdate() {
        // 사용자 입력을 감지하고 점프하는 처리
        if (isDead)
        {
            return;
        }
+       Move();
 
        
    }
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour {
        float xSpeed = xInput * moveForce;
 
        Vector2 newVelocity = new Vector2(xSpeed, playerRigidbody.velocity.y);
-
+        //a,d입력시 이동
        if (Input.GetKey(KeyCode.D) == true || Input.GetKey(KeyCode.A) == true) {
            isWalking = true;
            playerRigidbody.velocity = newVelocity;
@@ -51,9 +52,13 @@ public class PlayerController : MonoBehaviour {
            }
            animator.SetBool("Walking", isWalking);
        }
-
-       Move();
-       if (Input.GetMouseButtonDown(0) && jumpCount < 2)
+        // a,d 미입력시 멈춤
+       if (Input.GetKey(KeyCode.D) == false && Input.GetKey(KeyCode.A) == false) {
+           isWalking = false;
+           animator.SetBool("Walking", isWalking);
+       }
+        //2단점프
+       /*if (Input.GetMouseButtonDown(0) && jumpCount < 2)
        {
            jumpCount++;
            playerRigidbody.velocity = Vector2.zero;
@@ -64,7 +69,7 @@ public class PlayerController : MonoBehaviour {
        {
            playerRigidbody.velocity = playerRigidbody.velocity * 0.5f;
        }
-       animator.SetBool("Grounded", isGrounded);
+       animator.SetBool("Grounded", isGrounded);*/
    }
 
    private void Die() {

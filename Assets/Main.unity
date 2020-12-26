@@ -360,7 +360,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 392659541}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a6df2de58009bc34a9e4b42586a25132, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1225,11 +1225,11 @@ CircleCollider2D:
   m_GameObject: {fileID: 1446475987}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a6df2de58009bc34a9e4b42586a25132, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.57}
+  m_Offset: {x: 0, y: -0.7}
   serializedVersion: 2
   m_Radius: 0.2
 --- !u!50 &1446475991
